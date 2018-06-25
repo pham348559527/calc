@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calc">
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginRight="176dp"
+        android:layout_marginStart="96dp"
+        android:onClick="addValue"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginBottom="108dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="addValue"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginBottom="1dp"
+        android:onClick="addValue"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginBottom="108dp"
+        android:onClick="addValue"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEquals"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:onClick="addValue"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEquals"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:onClick="addValue"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="addValue"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="addValue"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginTop="22dp"
+        android:onClick="addValue"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/textDisplayInput" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:onClick="addValue"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAC"
+        app:layout_constraintStart_toEndOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/buttonAC"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:onClick="inputClear"
+        android:text="AC"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDEL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/textDisplayInput" />
+
+    <Button
+        android:id="@+id/buttonDEL"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:onClick="inputDel"
+        android:text="DEL"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEquals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
+
+    <Button
+        android:id="@+id/buttonEquals"
+        style="@style/zero"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginBottom="2dp"
+        android:onClick="inputEquals"
+        android:text="="
+        app:layout_constraintBottom_toTopOf="@+id/buttonSwap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDEL" />
+
+    <Button
+        android:id="@+id/buttonSwap"
+        android:layout_width="88sp"
+        android:layout_height="88sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="2dp"
+        android:onClick="statusChange"
+        android:text="Swap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/button0"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEquals" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="363dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Decimal to Roman Numeral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/textDisplayInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="22dp"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatus"
+        autofit:minTextSize="24sp" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/textDisplayOutput"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="22dp"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textAlignment="gravity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
+        autofit:layout_constraintBottom_toTopOf="@+id/buttonAC"
+        autofit:layout_constraintEnd_toEndOf="parent"
+        autofit:layout_constraintStart_toStartOf="parent"
+        autofit:layout_constraintTop_toBottomOf="@+id/textStatus"
+        autofit:minTextSize="24sp" />
+
+    <EditText
+        android:id="@+id/textEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:hint="Enter text"
+        android:visibility="invisible"
+        tools:ignore="InvalidId" />
+
+</android.support.constraint.ConstraintLayout>
